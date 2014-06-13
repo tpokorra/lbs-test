@@ -1,0 +1,46 @@
+%define name test
+%define version 1.0.0
+%define tarballversion 1.0.0
+
+Summary: Test
+Name: %{name}
+Version: %{version}
+Release: %{release}
+Packager: Timotheus Pokorra <timotheus.pokorra@solidcharity.com>
+License: GPL
+Group: Development
+BuildRequires: gcc
+BuildRoot: /tmp/buildroot
+Source: test.tar.bz2
+
+%description
+Test
+
+%prep
+[ -d %{buildroot} ] && [ "/" != "%{buildroot}" ] && rm -rf %{buildroot}
+%setup -q -n test-%{tarballversion}
+
+%build
+# Configure and make source
+#./configure
+#make
+
+%install
+rm -rf %{buildroot}
+#make DESTDIR=%{buildroot} install
+mkdir -p %{buildroot}/opt/test
+cp test.sh %{buildroot}/opt/test
+
+%clean
+# Clean up after ourselves, but be careful in case someone sets a bad buildroot
+[ -d %{buildroot} ] && [ "/" != "%{buildroot}" ] && rm -rf %{buildroot}
+
+%post -p /sbin/ldconfig
+
+%postun -p /sbin/ldconfig
+
+%files
+/opt/test
+
+* Fri Jun 13 2014 Timotheus Pokorra <timotheus.pokorra@solidcharity.com>
+- Test package for LBS
