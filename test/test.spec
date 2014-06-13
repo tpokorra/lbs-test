@@ -29,7 +29,7 @@ Test
 rm -rf %{buildroot}
 #make DESTDIR=%{buildroot} install
 mkdir -p %{buildroot}/opt/test
-cp test.sh %{buildroot}/opt/test
+cp test.txt %{buildroot}/opt/test
 
 %clean
 # Clean up after ourselves, but be careful in case someone sets a bad buildroot
