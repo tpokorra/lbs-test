@@ -42,8 +42,6 @@ cp test.txt %{buildroot}/opt/test
 %files
 /opt/test
 
-%post
-
 %changelog
 * Fri Jun 13 2014 Timotheus Pokorra <timotheus.pokorra@solidcharity.com>
 - Test package for LBS
