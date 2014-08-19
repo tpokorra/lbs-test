@@ -12,7 +12,7 @@ Group: Development
 BuildRequires: gcc
 BuildRoot: /tmp/buildroot
 Source: test.tar.bz2
-Source1: test22.txt
+Source1: test2.txt
 
 %description
 Test
