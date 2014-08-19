@@ -20,7 +20,6 @@ Test
 %prep
 [ -d %{buildroot} ] && [ "/" != "%{buildroot}" ] && rm -rf %{buildroot}
 %setup -q -n test-%{tarballversion}
-$setup1
 
 %build
 # Configure and make source
