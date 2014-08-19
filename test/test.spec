@@ -12,6 +12,7 @@ Group: Development
 BuildRequires: gcc
 BuildRoot: /tmp/buildroot
 Source: test.tar.bz2
+Source1: test22.txt
 
 %description
 Test
@@ -19,6 +20,7 @@ Test
 %prep
 [ -d %{buildroot} ] && [ "/" != "%{buildroot}" ] && rm -rf %{buildroot}
 %setup -q -n test-%{tarballversion}
+$setup1
 
 %build
 # Configure and make source
