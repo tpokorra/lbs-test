@@ -12,6 +12,7 @@ Group: Development
 BuildRequires: gcc
 BuildRoot: /tmp/buildroot
 Source: test.tar.bz2
+Source1: test2.txt
 
 %description
 Test
@@ -30,6 +31,7 @@ rm -rf %{buildroot}
 #make DESTDIR=%{buildroot} install
 mkdir -p %{buildroot}/opt/test
 cp test.txt %{buildroot}/opt/test
+cp ../../SOURCES/test2.txt %{buildroot}/opt/test
 
 %clean
 # Clean up after ourselves, but be careful in case someone sets a bad buildroot
