@@ -4,6 +4,8 @@ function buildTarBall {
     #echo "LBSERROR: no tarball was created"
     #exit 1
 
+    sleep 30
+
     # create the tarball
     mkdir test-1.0.0
     cd test-1.0.0
@@ -16,7 +18,3 @@ function buildTarBall {
 mkdir ~/sources
 
 buildTarBall
-
-# tell the LBS that the calling python script can continue
-echo "LBSScriptFinished"
-
