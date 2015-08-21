@@ -17,4 +17,7 @@ function buildTarBall {
 
 mkdir ~/sources
 
+# the shell parser must process non ascii characters
+echo "EBG_Elektronik_Sertifika_Hizmet_Sağlayıcısı.pem"
+
 buildTarBall
