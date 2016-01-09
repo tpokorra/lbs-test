@@ -1,0 +1,1 @@
+RUN apt-get update && apt-get install -y debhelper gcc build-essential ca-certificates iptables curl apt-transport-https dpkg-sig reprepro wget rsync && apt-get clean all
