@@ -17,6 +17,8 @@ Source1: test2.txt
 %description
 Test
 
+%global debug_package %{nil}
+
 %prep
 [ -d %{buildroot} ] && [ "/" != "%{buildroot}" ] && rm -rf %{buildroot}
 %setup -q -n test-%{tarballversion}
@@ -31,7 +33,7 @@ rm -rf %{buildroot}
 #make DESTDIR=%{buildroot} install
 mkdir -p %{buildroot}/opt/test
 cp test.txt %{buildroot}/opt/test
-cp ../../SOURCES/test2.txt %{buildroot}/opt/test
+install -p -m644 %{SOURCE1} %{buildroot}/opt/test
 
 %clean
 # Clean up after ourselves, but be careful in case someone sets a bad buildroot
