@@ -1,0 +1,1 @@
+RUN yum -y install tar createrepo gcc rpm-build rpm-sign gnupg make curl iptables rsync perl iproute yum-utils yum-plugin-priorities
